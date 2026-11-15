@@ -218,3 +218,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Dados e artefatos de ML
+#   Dados e modelos treinados ficam fora do Git (DVC, S3 ou MLflow).
+data/raw/
+data/processed/
+*.csv
+*.parquet
+models/*.pkl
+models/*.joblib
+# Exceção: amostras pequenas usadas nos testes podem ir para o Git
+!tests/fixtures/*.csv
+
+# MLflow
+mlruns/
+mlartifacts/
